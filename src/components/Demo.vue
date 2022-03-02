@@ -1,5 +1,6 @@
 <template>
 	<div>
+		{{value}}
 		<a href="javascript:;" @click="exchange">
 			{{$t('btn.exchange')}}
 		</a>
@@ -14,6 +15,7 @@
 
 <script>
 export default {
+	props: ['value'],
 	methods: {
 		exchange() {
 			this.$i18n.locale = this.$i18n.locale === 'zh-CN' ? 'en-US' : 'zh-CN'

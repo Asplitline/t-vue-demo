@@ -1,15 +1,18 @@
 <template>
 	<div id="app">
-		<Demo></Demo>
+		<!-- <Demo></Demo> -->
+		<PropOrAttr></PropOrAttr>
 	</div>
 </template>
 
 <script>
-import Demo from '@/components/Demo'
+// import Demo from '@/components/Demo'
+import PropOrAttr from '@/components/PropOrAttr'
 export default {
 	name: 'App',
 	components: {
-		Demo
+		// Demo,
+		PropOrAttr
 	}
 }
 </script>
