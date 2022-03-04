@@ -1,19 +1,24 @@
 <template>
 	<div id="app">
-		<!-- <Demo></Demo> -->
-		<PropOrAttr></PropOrAttr>
+		<!-- <example-prop-or-attr></example-prop-or-attr> -->
+		<example-sync v-bind.sync="obj"></example-sync>
+		{{obj.a}}
+		{{obj.b}}
 	</div>
 </template>
 
 <script>
-// import Demo from '@/components/Demo'
-import PropOrAttr from '@/components/PropOrAttr'
 export default {
 	name: 'App',
-	components: {
-		// Demo,
-		PropOrAttr
-	}
+	data() {
+		return {
+			obj: {
+				a: 1,
+				b: 2
+			}
+		}
+	},
+	components: {}
 }
 </script>
 
