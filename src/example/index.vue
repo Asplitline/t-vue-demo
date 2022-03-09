@@ -1,6 +1,5 @@
 <template>
 	<div id="app">
-		<example-i18n></example-i18n>
 		<!-- <example-prop-or-attr></example-prop-or-attr> -->
 		<example-sync v-bind.sync="obj"></example-sync>
 		{{obj.a}}
