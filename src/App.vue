@@ -12,15 +12,16 @@
 		</MyInput>
 
 		<MySlot>
+			<template #demo="slotProps">
+				{{slotProps.text}}
+			</template>
 			<template #prepend="slotProps">
 				{{slotProps.text}}prepend
 			</template>
 			<template #append>
 				append
 			</template>
-			<template #demo="slotProps">
-				{{slotProps.text}}
-			</template>
+
 		</MySlot>
 
 	</div>

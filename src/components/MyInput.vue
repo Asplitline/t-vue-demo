@@ -2,15 +2,15 @@
 <template>
 	<el-input v-bind="$attrs" @clear="$emit('clear')" v-on="$listeners">
 		<!-- 具名插槽 -->
-		<!-- <slot :slot="slotName" :name="slotName" v-for="(_,slotName) in $slots"></slot> -->
+		<slot :slot="slotName" :name="slotName" v-for="(_,slotName) in $slots"></slot>
 		<!-- 作用域插槽 -->
 		<!-- <template v-slot:[slotName] v-for="(_,slotName) in $slots">
 			<slot :name="slotName"></slot>
 		</template> -->
 		<!--  -->
-		<template v-slot:[slotName]="slotProps" v-for="(_,slotName) in $scopedSlots">
+		<!-- <template v-slot:[slotName]="slotProps" v-for="(_,slotName) in $scopedSlots">
 			<slot :name="slotName" v-bind="slotProps"></slot>
-		</template>
+		</template> -->
 	</el-input>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
 	<TplSlot>
 		<!-- 2.6+ -->
-		<!-- <template v-slot:[slotName] v-for="(_,slotName) in $slots">
+		<template v-slot:[slotName] v-for="(_,slotName) in $slots">
 			<slot :name="slotName"></slot>
-		</template> -->
+		</template>
 		<!-- old -->
 		<!-- <template :slot="slotName" v-for="(_,slotName) in $slots">
 			<slot :name="slotName"></slot>
@@ -24,13 +24,16 @@
 		</template> -->
 
 		<!-- <slot v-slot:[slotName]="slotName" :name="slotName" v-for="(_,slotName) in $slots">
-		</slot> -->
-		<!-- <template slot-scope="slotProps" v-for="(_,slotName) in $scopedSlots">
+		</slot>
+		<template slot-scope="slotProps" v-for="(_,slotName) in $scopedSlots">
 			<slot :name="slotName" v-bind="slotProps"></slot>
 		</template> -->
-		<template v-slot:[slotName]="slotProps" v-for="(_,slotName) in $scopedSlots">
+
+		<!-- base slot -->
+
+		<!-- <template v-slot:[slotName]="slotProps" v-for="(_,slotName) in $scopedSlots">
 			<slot :name="slotName" v-bind="slotProps"></slot>
-		</template>
+		</template> -->
 	</TplSlot>
 
 </template>
