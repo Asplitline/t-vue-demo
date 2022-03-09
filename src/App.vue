@@ -4,6 +4,10 @@
 		<example-sync v-bind.sync="obj"></example-sync>
 		{{obj.a}}
 		{{obj.b}}
+		<div ref="testRef">testRef</div>
+		<example-ref-cmp ref="refCmp"></example-ref-cmp>
+		<example-once-hook v-if="show"></example-once-hook>
+		<button @click="show=!show">toggle</button>
 	</div>
 </template>
 
@@ -15,10 +19,16 @@ export default {
 			obj: {
 				a: 1,
 				b: 2
-			}
+			},
+			show: true
 		}
 	},
-	components: {}
+	components: {},
+	mounted() {
+		console.log(this.$refs.testRef)
+		console.log(this.$refs.refCmp)
+		console.log(this.$refs.refCmp.$el)
+	}
 }
 </script>
 
