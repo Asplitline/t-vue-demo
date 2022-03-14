@@ -1,9 +1,10 @@
 <template>
-	<div id="list-demo" class="demo">
+
+	<div id="list-complete-demo" class="demo">
 		<button v-on:click="add">Add</button>
 		<button v-on:click="remove">Remove</button>
-		<transition-group name="list" tag="p" mode="in-out">
-			<span v-for="item in items" v-bind:key="item" class="list-item">
+		<transition-group name="list-complete" tag="p" mode="out-in">
+			<span v-for="item in items" v-bind:key="item" class="list-complete-item">
 				{{ item }}
 			</span>
 		</transition-group>
@@ -33,26 +34,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.list-item {
+.list-complete-item {
+	transition: all 1s;
 	display: inline-block;
-	margin: 0 4px;
+	margin-right: 10px;
 }
-
-.list-enter-active,
-.list-leave-active {
-	transition: all 0.2s linear;
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active for below version 2.1.8 */ {
+	opacity: 0;
+	transform: translateY(30px);
 }
-
-.list-leave-to,
-.list-enter {
-	transform: translateY(100%);
-}
-
-.list-move {
-	transition: transform 0.4s;
-}
-
-.list-leave-active {
+.list-complete-leave-active {
 	position: absolute;
 }
 </style>

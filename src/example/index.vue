@@ -16,6 +16,8 @@
 		<example-transition-on-off></example-transition-on-off>
 		<hr>
 		<example-transition-list></example-transition-list>
+		<hr>
+		<example-transition-list2></example-transition-list2>
 	</div>
 </template>
 
