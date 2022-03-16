@@ -1,6 +1,6 @@
 <template>
 	<div class="">
-
+		<base-scroll-number></base-scroll-number>
 	</div>
 </template>
 

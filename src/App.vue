@@ -1,10 +1,13 @@
 <template>
 	<div id="app">
+		<button @click="isExample=!isExample">toggle</button>
+		<hr>
 		<template v-if="isExample">
 			<h2>Example</h2>
 			<Example></Example>
 		</template>
 		<template v-else>
+			<h2>Base</h2>
 			<BaseComponent></BaseComponent>
 		</template>
 
