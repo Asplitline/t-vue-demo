@@ -1,35 +1,30 @@
 <template>
-	<div class="">
-		{{showNumToFix}}<br>
-		<button @click="add">add</button>
-	</div>
+	<span class="">
+		{{showNumToFix}}
+		<!-- <button @click="add">add</button> -->
+	</span>
 </template>
 
 <script>
 import gsap from 'gsap'
 export default {
+	props: ['num'],
 	data() {
 		return {
-			num: 0,
 			showNum: 0
-		}
-	},
-	methods: {
-		add() {
-			this.num += Math.floor(Math.random() * 100)
 		}
 	},
 	computed: {
 		showNumToFix() {
-			return this.showNum.toFixed(0)
+			return this.showNum?.toFixed(0)
 		}
 	},
 	watch: {
 		num(val) {
+			console.log(val)
 			gsap.to(this, { duration: 0.5, showNum: val })
 		}
-	},
-	mounted() {}
+	}
 }
 </script>
 
