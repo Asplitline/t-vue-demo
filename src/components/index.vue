@@ -5,6 +5,7 @@
 		<base-scroll-number :num="a"></base-scroll-number>+
 		<base-scroll-number :num="b"></base-scroll-number>=
 		<base-scroll-number :num="c"></base-scroll-number>
+		<hr>
 	</div>
 </template>
 
