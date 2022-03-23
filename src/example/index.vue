@@ -31,6 +31,11 @@
     <hr />
     <example-render-model v-model="test"></example-render-model>
     {{ test }}
+    <hr />
+    <example-functional-button demo="demo" @click="handleClick">
+      <template v-slot:foo>first</template>
+      <p>second</p>
+    </example-functional-button>
   </div>
 </template>
 
@@ -48,7 +53,12 @@ export default {
     }
   },
   components: {},
-  mounted() {}
+  mounted() {},
+  methods: {
+    handleClick() {
+      console.log('handleClick')
+    }
+  }
 }
 </script>
 
