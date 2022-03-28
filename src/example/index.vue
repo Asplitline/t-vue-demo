@@ -36,6 +36,8 @@
       <template v-slot:foo>first</template>
       <p>second</p>
     </example-functional-button>
+    <hr />
+    <example-set></example-set>
   </div>
 </template>
 
