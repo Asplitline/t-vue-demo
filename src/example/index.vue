@@ -38,6 +38,8 @@
     </example-functional-button>
     <hr />
     <example-set></example-set>
+    <hr />
+    <example-model v-model="mockModel"></example-model>
   </div>
 </template>
 
@@ -51,7 +53,8 @@ export default {
         b: 2
       },
       show: true,
-      test: ''
+      test: '',
+      mockModel: 1
     }
   },
   components: {},

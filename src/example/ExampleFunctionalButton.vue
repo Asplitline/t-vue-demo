@@ -5,8 +5,8 @@ export default {
     return {}
   },
   render(h, ctx) {
-    console.log(ctx.slots())
-    console.log(ctx.children)
+    // console.log(ctx.slots())
+    // console.log(ctx.children)
     return h('button', ctx.data, ctx.children)
   }
 }
